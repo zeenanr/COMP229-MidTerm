@@ -60,7 +60,7 @@ faculty.create(new_faculty,(err,new_faculty)=>{
   }
 });
 });
-});
+
 
 // GET the faculty  Details page in order to edit an existing faculty
 router.get("/:id", (req, res, next) => {
