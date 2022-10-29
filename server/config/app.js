@@ -1,4 +1,4 @@
-// moddules for node and express
+// modules for node and express
 let createError = require("http-errors");
 let express = require("express");
 let path = require("path");
@@ -37,7 +37,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "../../client")));
-
+app.use(express.static(path.join(__dirname, "../../node_modules")));
 // route redirects
 app.use("/", index);
 app.use("/faculties", faculties);

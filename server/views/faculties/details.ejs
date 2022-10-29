@@ -1,3 +1,8 @@
+<!--File name: details.ejs
+Author: Zeenath Razak
+Date: October 27, 2022
+modules required for routing
+--------------------------------------->
 <% include ../partials/header.ejs %>
 
 <!-- MAIN CONTENT -->
@@ -7,15 +12,15 @@
       <h1><%= title %></h1>
       <form class="form" method="post">
         <div class="form-group">
-          <label for="IdTextField">Faculty ID</label>
-          <input
-            type="text"
-            class="form-control"
-            id="IdTextField"
-            placeholder="Faculty Id"
-            name="Facultyid"
-            value="<%= faculties.Facultyid %>"
-            required
+          <label for="FacultyidTextField">Faculty ID</label>
+            <input
+              type="number"
+              class="form-control"
+              id="FacultyidTextField"
+              placeholder="Enter the Faculty ID"
+              name="Facultyid"
+              value="<%= faculties.Facultyid %>"
+              required
           />
         </div>
 
@@ -25,7 +30,7 @@
             type="text"
             class="form-control"
             id="NameTextField"
-            placeholder="Faculty Name"
+            placeholder="Enter the Faculty Name:"
             name="Facultyname"
             value="<%= faculties.Facultyname %>"
             required
@@ -34,32 +39,32 @@
 
         <div class="form-group">
           <label for="DeptTextField">Department</label>
-          <input
-            type="text"
-            class="form-control"
-            id="AuthorDeptTextField"
-            placeholder="Department"
-            name="Department"
-            value="<%= faculties.Department %>"
-            required
+            <input
+              type="text"
+              class="form-control"
+              id="DepartmenttTextField"
+              placeholder="Enter the Department:"
+              name="Department"
+              value="<%= faculties.Department %>"
+              required
           />
         </div>
 
         <div class="form-group">
           <label for="SubTextField">Subject</label>
-          <input
-            type="text"
-            class="form-control"
-            id="SubTextField"
-            placeholder="Subject"
-            name="Subject"
-            value="<%= faculties.Subject %>"
-            required
+            <input
+              type="text"
+              class="form-control"
+              id="SubjectTextField"
+              placeholder="Enter the Subject:"
+              name="Subject"
+              value="<%= faculties.Subject%>"
+              required
           />
         </div>
 
         <button type="submit" class="btn btn-primary">
-          <i class="fa fa-check-square-o"></i> Submit
+          <i class="fa fa-check-square-o"></i> Edit
         </button>
         <a href="/faculties" class="btn btn-warning"
           ><i class="fa fa-undo"></i> Cancel</a

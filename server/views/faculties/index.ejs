@@ -1,3 +1,7 @@
+<!--File name: index.js
+Author: Zeenath Razak
+Date: October 27, 2022-->
+
 <% include ../partials/header.ejs %>
 
 <!-- MAIN CONTENT -->
@@ -5,14 +9,11 @@
   <div class="row">
     <div class="col-md-offset-1 col-md-10">
       <h3>Faculty Information</h3>
-      <!-- ------------------------ -->
       <!-- FIX THE ADD BUTTON BELOW -->
-      <!-- ------------------------ -->
-      <a href="" class="btn btn-primary"
-        ><i class="fa fa-plus"></i> Add a faculty</a
-      >
-
-      <br />
+      <a href="/faculties/add" class="btn btn-primary" role="button"
+        ><i class="fa fa-plus"></i> Add a faculty</a>
+      <br>
+      <br/>
       <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">
           <thead>
@@ -34,22 +35,22 @@
               <td class="text-center"><%= faculties[count].Subject %></td>
 
               <td class="text-center">
-                <!-- ------------------------ -->
                 <!-- ADD the EDIT BUTTON HERE -->
-                <!-- ------------------------ -->
+                <a href="/faculties/ <%=faculties[count]._id%>" class="btn btn-primary" 
+                ><i class="fa fa-plus"></i> Edit</a>
+              </td>
+
+              <td class="text-center">
+                <!-- ADD the DELETE BUTTON HERE -->
+                <a href="/faculties/delete/<%=faculties[count].Facultyname%>" class="btn btn-primary" 
+                ><i class="fa fa-plus"></i> Delete</a>
               </td>
             </tr>
             <% } %>
           </tbody>
         </table>
       </div>
-      <!-- ------------------------ -->
-      <a href="" class="btn btn-warning btn-sm">
-        <i class="fas fa-trash"></i> Edit</a>
-      <!-- ------------------------ -->
-      
-      <a href="" class="btn btn-warning btn-sm">
-        <i class="fas fa-trash"></i> Delete</a>
+    </div>
     </main>
 
       <div class="col-md-offset-1 col-md-10 text-center">
