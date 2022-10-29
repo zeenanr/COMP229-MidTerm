@@ -3,7 +3,6 @@
 //Date: October 27, 2022
 // modules required for routing
 //---------------------------------------
-
 let express = require("express");
 let router = express.Router();
 let mongoose = require("mongoose");
@@ -31,9 +30,9 @@ router.get("/", (req, res, next) => {
 router.get("/add", (req, res, next) => {
 let faculties=faculty({});
 //Show Add page when you click Add
-//res.render("faculties/add",{title:"Add a faculty"});
-res.render('faculties/details'),{title: 'Add a new faculty', faculties:faculties
-}
+res.render("faculties/add",{title:"Add a faculty"});
+//res.render('faculties/details)',{title: 'Add a new faculty', faculties:faculties
+})
 
 // POST process the faculty  Details page and create a new faculty  - CREATE
 router.post("/add", (req, res, next) => {
